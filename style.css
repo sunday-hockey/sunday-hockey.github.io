@@ -2,7 +2,6 @@ nav {
   width: 100%;
   height: 70px;
   background-color: rgb(4, 150, 255);
-  padding-top: 5px;
   box-sizing: border-box;
 }
 
@@ -18,9 +17,15 @@ nav a:hover {
 }
 
 nav ul {
+  text-align: center;
   display: flex;
 }
 
 nav li {
   list-style: none;
+}
+
+#title {
+  font-size: 20px;
+  color: white;
 }
