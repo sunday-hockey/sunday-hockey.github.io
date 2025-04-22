@@ -1,31 +1,44 @@
+/* ナビゲーションバーのスタイル */
 nav {
-  width: 100%;
-  height: 70px;
-  background-color: rgb(4, 150, 255);
-  box-sizing: border-box;
+  width: auto;
+  height: auto;
+  background-color: rgb(4, 150, 255); /* 背景色を青に設定 */
+  box-sizing: border-box; /* ボックスサイズを調整 */
+  display: flex; /* フレックスボックスを使用 */
+  align-items: center; /* 垂直方向に中央揃え */
 }
 
+/* ナビゲーションリンクのスタイル */
 nav a {
-  display: block;
-  text-decoration: none;
-  color: white;
-  margin-right: 35px;
+  display: block; /* ブロック要素として表示 */
+  text-decoration: none; /* アンダーラインを削除 */
+  color: white; /* テキスト色を白に設定 */
+  margin-right: 35px; /* 右側に余白を追加 */
 }
 
+/* ナビゲーションリンクのホバー時のスタイル */
 nav a:hover {
-  color: yellow;
+  color: yellow; /* ホバー時にテキスト色を黄色に変更 */
 }
 
-nav ul {
-  text-align: center;
-  display: flex;
-}
-
+/* ナビゲーションリストのスタイル */
 nav li {
-  list-style: none;
+  list-style: none; /* リストのマーカーを削除 */
+  display: flex; /* フレックスボックスを使用 */
+  align-items: center; /* 垂直方向に中央揃え */
 }
 
+/* リスト全体のスタイル */
+ul {
+  display: flex; /* フレックスボックスを使用して横並びに */
+}
+
+/* タイトルのスタイル */
 #title {
-  font-size: 20px;
-  color: white;
+  font-size: 20px; /* タイトルのフォントサイズを設定 */
+}
+
+body {
+  margin: auto; /* ボディのマージンを削除 */
+  width: 960px; /* ボディの幅を960pxに設定 */
 }
