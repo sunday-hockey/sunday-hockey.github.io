@@ -1,37 +1,37 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <link rel="icon" type="image/png" href="images/icon.png">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
+        body {
+            background-color: #f4f4f4; /* 背景色を薄いグレーに設定 */
+            color: #333; /* テキスト色を濃いグレーに設定 */
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif; /* フォントをRobotoに変更 */
+        }
         /* ナビゲーションバーのスタイル */
         nav {
-            background-color: rgb(4, 150, 255); /* 背景色を青に設定 */
-            display: flex; /* フレックスボックスを使用 */
-            align-items: center; /* 垂直方向に中央揃え */
-            padding: 10px; /* パディングを追加 */
-            position: fixed; /* 画面上部に固定 */
-            top: 0; /* 上端に配置 */
-            width: 100%; /* 横幅を画面全体に設定 */
-            z-index: 1000; /* 他の要素より前面に表示 */
+            background-color: rgb(4, 150, 255);
+            display: flex;
+            align-items: center;
+            padding: 10px 20px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* シャドウを追加 */
         }
 
-        /* ナビゲーションバーの下のコンテンツが隠れないようにするための調整 */
-        body {
-            margin-top: 60px; /* ナビゲーションバーの高さ分の余白を追加 */
-        }
-
-        /* ナビゲーションリンクのスタイル */
         nav a {
-            text-decoration: none; /* アンダーラインを削除 */
-            color: white; /* テキスト色を白に設定 */
-            margin-right: 20px; /* 右側に余白を追加 */
+            text-decoration: none;
+            color: white;
+            margin-right: 20px;
+            transition: color 0.3s ease; /* ホバー時のアニメーション */
         }
 
-        /* ナビゲーションリンクのホバー時のスタイル */
         nav a:hover {
-            color: yellow; /* ホバー時にテキスト色を黄色に変更 */
+            color: yellow;
         }
 
         /* リスト全体のスタイル */
@@ -55,6 +55,10 @@
             height: auto; /* 高さは自動調整 */
         }
 
+        .discription-image {
+            width: 30%; /* 画像の幅を30%に設定 */
+            height: auto; /* 高さは自動調整 */
+        }
         /* トップ画像コンテナのスタイル */
         #top-images {
             display: flex; /* フレックスボックスを使用 */
@@ -79,6 +83,51 @@
         footer {
             text-align: center; /* テキストを中央揃え */
             margin-top: 20px; /* 上部に余白を追加 */
+        }
+
+        .discription {
+            display: flex;
+        }
+        @media (max-width: 768px) {
+            /* ナビゲーションバーの調整 */
+            nav {
+                padding: 15px 20px; /* ナビゲーションバーのパディングを増やす */
+            }
+
+            nav a {
+                font-size: 18px; /* リンクの文字サイズを大きくする */
+            }
+
+            #logo {
+                width: 180px; /* ロゴ画像を少し大きくする */
+            }
+
+            /* トップ画像の調整 */
+            .top-image {
+                width: 95%; /* モバイルでは画像を幅95%に */
+                max-width: 600px; /* 最大幅を設定 */
+            }
+
+            /* 説明用画像の調整 */
+            .discription-image {
+                width: 90%; /* 説明画像を幅90%に */
+                max-width: 500px; /* 最大幅を設定 */
+            }
+
+            /* セクションの文字サイズを調整 */
+            section h2 {
+                font-size: 24px; /* セクションタイトルを大きくする */
+            }
+
+            section p {
+                font-size: 18px; /* 段落の文字サイズを大きくする */
+                line-height: 1.8; /* 行間を広げて読みやすくする */
+            }
+
+            /* フッターの文字サイズを調整 */
+            footer {
+                font-size: 16px; /* フッターの文字サイズを大きくする */
+            }
         }
     </style>
     <title>日曜ホッケー</title>
@@ -108,23 +157,33 @@
         <p>2025年Minecraftカップに出展する4人組の名前です。<br>
         チーム名は、以前大須スケートリンクで活動していたことに由来します。</p>
     </section>
-
+    <!-- 2025年Minceraftカップ -->
+    <section id="mc2025">
+        <h2>2025年Minecraftカップ</h2>
+        <div class="discription">
+        <p>制作中。制作状況など詳しい情報につきましては、<a href="https://trello.com/b/0PBMiZVN/%E3%83%9E%E3%82%A4%E3%83%B3%E3%82%AF%E3%83%A9%E3%83%95%E3%83%88%E3%82%AB%E3%83%83%E3%83%97%E6%97%A5%E6%9B%9C%E3%83%9B%E3%83%83%E3%82%B1%E3%83%BCtodo%E3%83%AA%E3%82%B9%E3%83%88"
+        >trello<img src="/images/popup.png" class="popup-icon"></a>をご覧ください。</p>
+        </div>
+    </section>
     <!-- 2024年Minecraftカップ -->
     <section id="mc2024">
         <h2>2024年Minecraftカップ</h2>
-        <img src="images/2024top.png" alt="2024年Minecraftカップのイメージ" class="top-image">
-        <p><a href="https://minecraftcup.com/works/workarticle/?work_id=2915" target="_blank">こちら<img src="images/popup.png" alt="外部リンク" class="popup-icon"></a>からご覧いただけます。</p>
+        <div class="discription">
+            <img src="images/2024top.png" alt="2024年Minecraftカップのイメージ" class="discription-image">
+            <p>2025年Minecraftカップのテーマは「セイブツシティー」です。自然のきれいな夜景をモチーフとした、生き物をより身近に感じられるワールドです。
+            Minecraftカップの作品サイトは<a href="https://minecraftcup.com/works/workarticle/?work_id=2915" target="_blank">こちら<img src="images/popup.png" alt="外部リンク" class="popup-icon"></a>からご覧いただけます。</p>
+        </div>
     </section>
 
     <!-- お問い合わせ -->
     <section id="contact">
         <h3>お問い合わせ先</h3>
-        <p>ソースコード、お問い合わせは<a href="https://github.com/sunday-hockey/sunday-hockey.github.io" target="_blank">こちら<img src="images/popup.png" class="popup-icon"></a></p>
+        <p>ソースコード、お問い合わせは<a href="https://github.com/sunday-hockey/sunday-hockey.github.io" target="_blank">github<img src="images/popup.png" class="popup-icon"></a>からお願いします</p>
     </section>
 
     <!-- フッター -->
     <footer>
-        <p>&copy; 2025 日曜ホッケー</p>
+        <p>&copy; 2025 日曜ホッケー  CC BY-NC 4.0</p>
     </footer>
     <script src="script.js"></script>
 </body>
