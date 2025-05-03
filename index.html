@@ -2,184 +2,8 @@
 <html lang="ja">
     <head>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-        <script>
-            
-        </script>
-        <style>
-        body {
-            background-color: #f4f4f4; /* 背景色を薄いグレーに設定 */
-            color: #333; /* テキスト色を濃いグレーに設定 */
-            margin: 0;
-            padding: 0;
-            font-family: 'Roboto', sans-serif; /* フォントをRobotoに変更 */
-        }
-        /* ナビゲーションバーのスタイル */
-        nav {
-            background-color: rgb(4, 150, 255);
-            display: flex;
-            align-items: center;
-            padding: 10px 20px;
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* シャドウを追加 */
-            animation: fadeIn 1s ease-in-out;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: white;
-            margin-right: 20px;
-            transition: color 0.3s ease; /* ホバー時のアニメーション */
-        }
-
-        nav a:hover {
-            color: yellow;
-        }
-
-        /* リスト全体のスタイル */
-        nav ul {
-            display: flex; /* フレックスボックスを使用して横並びに */
-            list-style: none; /* リストのマーカーを削除 */
-            margin: 0;
-            padding: 0;
-        }
-
-        /* タイトル画像のスタイル */
-        #logo {
-            width: 150px; /* ロゴ画像の幅を設定 */
-            height: auto; /* 高さは自動調整 */
-            margin-right: 20px; /* 右側に余白を追加 */
-        }
-
-        /* トップ画像のスタイル */
-        .top-image {
-            width: 50%; /* 画像の幅を50%に設定 */
-            height: auto; /* 高さは自動調整 */
-        }
-
-        .discription-image {
-            width: 50%; /* 画像の幅を30%に設定 */
-            height: auto; /* 高さは自動調整 */
-            padding: 10px;
-        }
-        /* トップ画像コンテナのスタイル */
-        #top-images {
-            display: flex; /* フレックスボックスを使用 */
-            justify-content: center; /* 水平方向に中央揃え */
-            align-items: center; /* 垂直方向に中央揃え */
-            flex-wrap: wrap; /* 複数行に対応 */
-        }
-
-        /* ポップアップアイコンのスタイル */
-        .popup-icon {
-            width: 15px; /* アイコンの幅を設定 */
-            height: auto; /* 高さは自動調整 */
-            margin-left: 5px; /* 左側に余白を追加 */
-        }
-
-        /* セクションのスタイル */
-        section {
-            margin: 20px; /* セクション間の余白を設定 */
-            opacity: 0;
-            animation: fadeIn 1s ease-in-out;
-            animation-fill-mode: forwards;
-        }
-
-        /* セクションの遅延アニメーション */
-        section:nth-child(2) {
-            animation-delay: 0.5s;
-        }
-
-        section:nth-child(3) {
-            animation-delay: 1s;
-        }
-
-        section:nth-child(4) {
-            animation-delay: 1.5s;
-        }
-
-        /* ボタンのスタイル */
-        .btn {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: rgb(4, 150, 255);
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-
-        .btn:hover {
-            background-color: rgb(3, 120, 200);
-        }
-
-        /* フッターのスタイル */
-        footer {
-            text-align: center; /* テキストを中央揃え */
-            margin-top: 20px; /* 上部に余白を追加 */
-        }
-
-        .discription {
-            display: flex;
-        }
-        @media (max-width: 768px) {
-            /* ナビゲーションバーの調整 */
-            nav {
-                padding: 15px 20px; /* ナビゲーションバーのパディングを増やす */
-            }
-
-            nav a {
-                font-size: 18px; /* リンクの文字サイズを大きくする */
-            }
-
-            #logo {
-                width: 180px; /* ロゴ画像を少し大きくする */
-            }
-
-            /* トップ画像の調整 */
-            .top-image {
-                width: 95%; /* モバイルでは画像を幅95%に */
-                max-width: 600px; /* 最大幅を設定 */
-            }
-
-            /* 説明用画像の調整 */
-            .discription-image {
-                width: 90%; /* 説明画像を幅90%に */
-                max-width: 500px; /* 最大幅を設定 */
-            }
-
-            /* セクションの文字サイズを調整 */
-            section h2 {
-                font-size: 24px; /* セクションタイトルを大きくする */
-            }
-
-            section p {
-                font-size: 18px; /* 段落の文字サイズを大きくする */
-                line-height: 1.8; /* 行間を広げて読みやすくする */
-            }
-
-            /* フッターの文字サイズを調整 */
-            footer {
-                font-size: 16px; /* フッターの文字サイズを大きくする */
-            }
-        }
-
-        /* フェードインアニメーション */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-    </style>
-    <title>日曜ホッケー</title>
-</head>
+        <link rel="stylesheet" href="style.css">
+    </head>
 <body>
     <!-- ヘッダー -->
     <header>
@@ -204,14 +28,14 @@
         <h2>日曜ホッケーについて</h2>
         <p>2025年Minecraftカップに出展する4人組の名前です。<br>
         チーム名は、以前大須スケートリンクで活動していたことに由来します。</p>
-        <a href="#mc2025" class="btn">詳しく見る</a>
     </section>
     <!-- 2025年Minceraftカップ -->
     <section id="mc2025">
         <h2>2025年Minecraftカップ</h2>
         <div class="discription">
-        <p>制作中。制作状況など詳しい情報につきましては、<a href="https://trello.com/b/0PBMiZVN/%E3%83%9E%E3%82%A4%E3%83%B3%E3%82%AF%E3%83%A9%E3%83%95%E3%83%88%E3%82%AB%E3%83%83%E3%83%97%E6%97%A5%E6%9B%9C%E3%83%9B%E3%83%83%E3%82%B1%E3%83%BCtodo%E3%83%AA%E3%82%B9%E3%83%88"
-        >trello<img src="/images/popup.png" class="popup-icon"></a>をご覧ください。</p>
+            <p>製作中。製作状況など詳しい情報につきましては、<a target="_blank" href="https://trello.com/b/0PBMiZVN/%E3%83%9E%E3%82%A4%E3%83%B3%E3%82%AF%E3%83%A9%E3%83%95%E3%83%88%E3%82%AB%E3%83%83%E3%83%97%E6%97%A5%E6%9B%9C%E3%83%9B%E3%83%83%E3%82%B1%E3%83%BCtodo%E3%83%AA%E3%82%B9%E3%83%88"
+                >trello<img src="/images/popup.png" class="popup-icon" ></a>をご覧ください。</p>
+           <a href="#mc2025" class="btn"></a>
         </div>
     </section>
     <!-- 2024年Minecraftカップ -->
@@ -240,20 +64,6 @@
         <p>&copy; 2025 日曜ホッケー  CC BY-NC 4.0</p>
     </footer>
 
-    <!-- スクロール時のフェードインを有効化するスクリプト -->
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const sections = document.querySelectorAll("section");
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.style.opacity = 1;
-                    }
-                });
-            }, { threshold: 0.1 });
-
-            sections.forEach(section => observer.observe(section));
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
