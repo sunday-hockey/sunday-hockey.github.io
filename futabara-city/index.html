@@ -1,27 +1,75 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>(仮)双原市</title>
+    <meta charset="UTF-8"> <!-- 文字エンコーディングをUTF-8に設定 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- レスポンシブデザイン対応 -->
+    <title>(仮)双原市</title> <!-- ページタイトル -->
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-    <header>
-        <h3>(仮)双原市</h3>
+    <header class="slide-fade-in">
+                <nav>
+            <ul>
+                <li><a href="../index.html"><img src="../images/sundayHockey.png" alt="日曜ホッケーのロゴ" id="logo"></a></li>
+                <li><a href="index.html">(仮)双原市</a></li>
+                <li><a href="lrt/index.html">LRT</a></li>
+                <li><a href="https://minecraftcup.com/" target="_blank" rel="noopener noreferrer">Minecraftカップ公式サイト<img src="../images/popup.png" alt="外部リンクアイコン" class="popup-icon"></a></li>
+            </ul>
+        </nav>
+
     </header>
     <main>
-        <h1 style="color: red;">※仮ページです。町の名前も変更する予定です。</h1>
-        <h2>(仮)双原市とは？</h2>
-        <p>(仮)双原市とは、2025年のマインクラフトカップに出展するチーム日曜ホッケーが運営している町です。</p>
-        <h2>ワールドデータの配布</h2>
-        <li>
-            <ul>製作段階ですので、町と言っていいのかわからないクオリティです。</ul>
-            
-        </li>
-        <p>ワールドデータを配布しています。最新バージョンのワールドデータは<a href="world\R7_日曜ホッケー_フラット_30.mcworld">こちらからダウンロードできます。</a></p><p>最終更新日時:2025/5/5 17:22 ver.30</p>
+        <div class="top-images">
+            <img class="top-image" src="../images/futabaraTop.png" alt="双原市のイメージ画像"> <!-- トップ画像 -->
+            <img class="top-image" src="../images/fumikiri.png" alt="双原市の踏切のイメージ画像"> <!-- トップ画像 -->
+        </div>2
+        <h1 class="slide-fade-in" style="color: red;">※仮ページです。町の名前も変更する予定です。</h1> <!-- 注意書き -->
+        <section class="slide-fade-in">
+            <h2>(仮)双原市とは？</h2> <!-- セクションタイトル -->
+            <p>(仮)双原市とは、2025年のマインクラフトカップに出展するチーム日曜ホッケーが運営している町です。</p> <!-- 説明文 -->
+        </section>
+        <section class="slide-fade-in">
+            <h2>ワールドデータの配布</h2> <!-- セクションタイトル -->
+            <ul>
+                <li>製作段階ですので、町と言っていいのかわからないクオリティです。</li> <!-- 注意点1 -->
+                <li>今後のアップデートにご期待ください。</li> <!-- 注意点2 -->
+                <li>以前のバージョンのデータは配布していません。ご了承ください。</li> <!-- 注意点3 -->
+            </ul>
+            <p>
+                ワールドデータを配布しています。最新バージョンのワールドデータは
+                <a href="world/R7_日曜ホッケー_フラット_33.mcworld">こちらからダウンロードできます。</a> <!-- ダウンロードリンク -->
+            </p>
+            <div>
+                <span>ワールドデータの最終更新：</span><time id="event-time" datetime="2025-05-07T12:00:00+05:30"></time> <!-- イベント日時 -->
+            </div>
+        </section>
     </main>
-    <footer>
-        <p>&copy; 2025 日曜ホッケー</p>
+    <footer class="slide-fade-in">
+        <p>&copy; 2025 日曜ホッケー</p> <!-- フッターの著作権情報 -->
     </footer>
+    <script>
+        // <time>要素のローカルタイム表示
+        const timeElement = document.getElementById('event-time');
+        if (timeElement) {
+            const eventTime = new Date(timeElement.getAttribute('datetime'));
+            timeElement.textContent = eventTime.toLocaleString();
+        }
+
+        // アニメーション: Intersection Observerで順次表示
+        document.addEventListener('DOMContentLoaded', () => {
+            const animatedEls = document.querySelectorAll('.slide-fade-in');
+            const observer = new window.IntersectionObserver((entries, obs) => {
+                entries.forEach((entry, idx) => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => {
+                            entry.target.classList.add('visible');
+                        }, idx * 120); // 順次ディレイ
+                        obs.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+            animatedEls.forEach(el => observer.observe(el));
+        });
+    </script>
 </body>
 </html>
