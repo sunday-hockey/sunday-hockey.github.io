@@ -13,10 +13,16 @@
             padding: 15px 30px; /* パディングを増やして見やすくする */
             position: fixed;
             top: 0;
+            left: 0;
             width: 100%;
             z-index: 1000;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* シャドウを追加 */
             animation: fadeIn 1s ease-in-out;
+        }
+
+        /* ナビゲーションバーの下に余白を追加（固定時の重なり防止） */
+        body {
+            padding-top: 70px; /* navの高さ分だけ余白を追加。必要に応じて調整 */
         }
 
         nav a {
@@ -57,7 +63,7 @@
             padding: 10px;
         }
         /* トップ画像コンテナのスタイル */
-        #top-images {
+        .top-images {
             display: flex; /* フレックスボックスを使用 */
             justify-content: center; /* 水平方向に中央揃え */
             align-items: center; /* 垂直方向に中央揃え */
