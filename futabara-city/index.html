@@ -22,39 +22,23 @@
         <div class="top-images">
             <img class="top-image" src="../images/futabaraTop.png" alt="双原市のイメージ画像"> <!-- トップ画像 -->
             <img class="top-image" src="../images/fumikiri.png" alt="双原市の踏切のイメージ画像"> <!-- トップ画像 -->
-        </div>2
+        </div>
         <h1 class="slide-fade-in" style="color: red;">※仮ページです。町の名前も変更する予定です。</h1> <!-- 注意書き -->
         <section class="slide-fade-in">
             <h2>(仮)双原市とは？</h2> <!-- セクションタイトル -->
             <p>(仮)双原市とは、2025年のマインクラフトカップに出展するチーム日曜ホッケーが運営している町です。</p> <!-- 説明文 -->
         </section>
         <section class="slide-fade-in">
-            <h2>ワールドデータの配布</h2> <!-- セクションタイトル -->
-            <ul>
-                <li>製作段階ですので、町と言っていいのかわからないクオリティです。</li> <!-- 注意点1 -->
-                <li>今後のアップデートにご期待ください。</li> <!-- 注意点2 -->
-                <li>以前のバージョンのデータは配布していません。ご了承ください。</li> <!-- 注意点3 -->
-            </ul>
-            <p>
-                ワールドデータを配布しています。最新バージョンのワールドデータは
-                <a href="world/R7_日曜ホッケー_フラット_33.mcworld">こちらからダウンロードできます。</a> <!-- ダウンロードリンク -->
-            </p>
-            <div>
-                <span>ワールドデータの最終更新：</span><time id="event-time" datetime="2025-05-07T12:00:00+05:30"></time> <!-- イベント日時 -->
-            </div>
+            <h2>双原市の特徴</h2> <!-- セクションタイトル -->
+            <ol>
+                <li style="size: 50px;">災害に強いまちづくり</li>
+            </ol>
         </section>
     </main>
     <footer class="slide-fade-in">
         <p>&copy; 2025 日曜ホッケー</p> <!-- フッターの著作権情報 -->
     </footer>
     <script>
-        // <time>要素のローカルタイム表示
-        const timeElement = document.getElementById('event-time');
-        if (timeElement) {
-            const eventTime = new Date(timeElement.getAttribute('datetime'));
-            timeElement.textContent = eventTime.toLocaleString();
-        }
-
         // アニメーション: Intersection Observerで順次表示
         document.addEventListener('DOMContentLoaded', () => {
             const animatedEls = document.querySelectorAll('.slide-fade-in');
